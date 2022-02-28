@@ -15,11 +15,7 @@ const serviceSChema = mongoose.Schema(
       lowercase: true,
     },
     image: {
-      type: String,
-      required: true,
-    },
-    _id: {
-      type: objectId,
+      type: Object,
     },
   },
   {

@@ -5,11 +5,9 @@ const objectId = Schema.ObjectId;
 const clientSchema = mongoose.Schema(
   {
     image: {
-      type: String,
-      required: true,
-    },
-    _id: {
-      type: objectId,
+      // data: Buffer,
+      // contentType: Object,
+      type: Object,
     },
   },
   {
@@ -20,3 +18,4 @@ const clientSchema = mongoose.Schema(
 const Client = mongoose.model('Client', clientSchema);
 
 module.exports = Client;
+// export default Client;

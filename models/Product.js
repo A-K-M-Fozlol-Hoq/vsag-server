@@ -9,11 +9,7 @@ const productSchema = mongoose.Schema(
       trim: true,
     },
     image: {
-      type: String,
-      required: true,
-    },
-    _id: {
-      type: objectId,
+      type: Object,
     },
   },
   {
