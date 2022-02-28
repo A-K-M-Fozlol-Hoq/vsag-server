@@ -15,8 +15,7 @@ const slideSchema = mongoose.Schema(
       lowercase: true,
     },
     image: {
-      data: Buffer,
-      contentType: String,
+      type: Object,
     },
   },
   {

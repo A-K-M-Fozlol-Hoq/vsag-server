@@ -14,5 +14,5 @@ router.route('/add').post(addClient);
 router.route('/getAll').get(getClients);
 
 // Path => client/getByName/:searchStr
-router.route('/deleteById/:id').get(deleteClient);
+router.route('/deleteById/:id').delete(deleteClient);
 module.exports = router;
