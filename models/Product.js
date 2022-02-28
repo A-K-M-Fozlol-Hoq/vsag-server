@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-
+const { Schema } = mongoose;
+const objectId = Schema.ObjectId;
 const productSchema = mongoose.Schema(
   {
     name: {
@@ -10,6 +11,9 @@ const productSchema = mongoose.Schema(
     image: {
       type: String,
       required: true,
+    },
+    _id: {
+      type: objectId,
     },
   },
   {

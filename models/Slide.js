@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-
+const { Schema } = mongoose;
+const objectId = Schema.ObjectId;
 const slideSchema = mongoose.Schema(
   {
     title: {
@@ -16,6 +17,9 @@ const slideSchema = mongoose.Schema(
     image: {
       type: String,
       required: true,
+    },
+    _id: {
+      type: objectId,
     },
   },
   {
