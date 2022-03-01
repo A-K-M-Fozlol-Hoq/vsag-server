@@ -19,8 +19,7 @@ clientController.addClient = async (req, res, next) => {
   const clientInfo = {
     image: img,
   };
-  // console.log(clientInfo);
-  // console.log(Client);
+
   // Create an instance of the Model client
   const client = await new Client(clientInfo);
 
