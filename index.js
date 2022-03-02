@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 // internal imports
 const clientRouter = require('./router/clientRouter');
 const productRouter = require('./router/productRouter');
-const serviceController = require('./router/serviceController');
+const serviceRouter = require('./router/serviceRouter');
 
 const port = process.env.PORT || 4000;
 
@@ -35,7 +35,7 @@ app.use(fileUpload());
 
 app.use('/client', clientRouter);
 app.use('/product', productRouter);
-app.use('/service', serviceController);
+app.use('/service', serviceRouter);
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
