@@ -12,7 +12,6 @@ const serviceSChema = mongoose.Schema(
       type: String,
       required: true,
       trim: true,
-      lowercase: true,
     },
     image: {
       type: Object,

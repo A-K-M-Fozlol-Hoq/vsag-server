@@ -34,6 +34,7 @@ app.use(fileUpload());
 
 app.use('/client', clientRouter);
 app.use('/product', productRouter);
+app.use('/service', serviceController);
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
