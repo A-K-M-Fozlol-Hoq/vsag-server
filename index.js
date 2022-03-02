@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 // internal imports
 const clientRouter = require('./router/clientRouter');
 const productRouter = require('./router/productRouter');
+const serviceController = require('./router/serviceController');
 
 const port = process.env.PORT || 4000;
 
