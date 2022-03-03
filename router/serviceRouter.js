@@ -6,12 +6,12 @@ const { addService, getServices, deleteService } = serviceController;
 // Router Object -- module scaffolding
 let router = express.Router();
 
-// Path => /product/add
+// Path => /service/add
 router.route('/add').post(addService);
 
-// Path => product/getAll
+// Path => service/getAll
 router.route('/getAll').get(getServices);
 
-// Path => product/deleteById/:searchStr
+// Path => service/deleteById/:searchStr
 router.route('/deleteById/:id').delete(deleteService);
 module.exports = router;

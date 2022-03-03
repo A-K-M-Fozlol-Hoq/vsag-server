@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 const clientRouter = require('./router/clientRouter');
 const productRouter = require('./router/productRouter');
 const serviceRouter = require('./router/serviceRouter');
+const slideRouter = require('./router/slideRouter');
 
 const port = process.env.PORT || 4000;
 
@@ -36,6 +37,7 @@ app.use(fileUpload());
 app.use('/client', clientRouter);
 app.use('/product', productRouter);
 app.use('/service', serviceRouter);
+app.use('/slide', slideRouter);
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
