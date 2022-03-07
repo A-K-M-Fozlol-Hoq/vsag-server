@@ -11,6 +11,7 @@ const productRouter = require('./router/productRouter');
 const serviceRouter = require('./router/serviceRouter');
 const slideRouter = require('./router/slideRouter');
 const emailRouter = require('./router/emailRouter');
+const adminRouter = require('./router/adminRouter');
 
 const port = process.env.PORT || 4000;
 
@@ -43,6 +44,7 @@ app.use('/product', productRouter);
 app.use('/service', serviceRouter);
 app.use('/slide', slideRouter);
 app.use('/email', emailRouter);
+app.use('/admin', adminRouter);
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
