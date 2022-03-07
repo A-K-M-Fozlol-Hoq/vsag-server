@@ -6,6 +6,7 @@ productController.addProduct = async (req, res, next) => {
   // Read data from request body
   const image = req.files.image;
   const name = req.body.name;
+  const price = req.body.price;
   const newImg = image.data;
   const encImg = newImg.toString('base64');
 
@@ -18,6 +19,7 @@ productController.addProduct = async (req, res, next) => {
   const productInfo = {
     image: img,
     name,
+    price,
   };
   const product = await new Product(productInfo);
 

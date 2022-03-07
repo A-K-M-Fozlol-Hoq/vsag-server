@@ -2,7 +2,7 @@
 const Product = require('../models/Product');
 const emailController = {};
 
-emailController.send = async (req, res, next) => {
+emailController.sendEmail = async (req, res, next) => {
   // Read data from request body
   const id = req.body._id;
   const sendTo = req.body.email;
