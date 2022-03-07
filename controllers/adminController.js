@@ -47,12 +47,10 @@ adminController.isAdmin = async (req, res, next) => {
           password: user.password,
         };
 
-        console.log(user, 'one');
         // generate token
         const token = jwt.sign(userObject, process.env.JWT_SECRET, {
           expiresIn: process.env.JWT_EXPIRY,
         });
-        console.log(userObject, token, 'two');
         res.send({ userObject, token });
       } else {
         res.send('Invalid email or password, please try again');
@@ -70,12 +68,14 @@ adminController.isAdmin = async (req, res, next) => {
 adminController.isValid = async (req, res, next) => {
   try {
     const user = await Admin.findOne({ email: req.body.email });
+    console.log(user, req.body.email, req.body.password);
     if (user && user._id) {
-      const isValidPassword = await bcrypt.compare(
-        req.body.password,
-        user.password
-      );
-      if (isValidPassword) {
+      // const isValidPassword = await bcrypt.compare(
+      //   req.body.password,
+      //   user.password
+      // );
+      // console.log(isValidPassword);
+      if (req.body.password === user.password) {
         res.send(true);
       } else {
         res.send(false);
