@@ -55,5 +55,4 @@ serviceController.deleteService = async (req, res, next) => {
     res.send(err);
   }
 };
-
 module.exports = serviceController;
