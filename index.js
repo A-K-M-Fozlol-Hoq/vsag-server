@@ -45,6 +45,6 @@ app.use('/service', serviceRouter);
 app.use('/slide', slideRouter);
 app.use('/email', emailRouter);
 app.use('/admin', adminRouter);
-app.listen(port, () =>
+app.listen(process.env.PORT || port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
