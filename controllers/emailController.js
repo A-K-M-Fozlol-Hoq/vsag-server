@@ -1,3 +1,4 @@
+var nodemailer = require('nodemailer');
 // Models
 const Product = require('../models/Product');
 const emailController = {};
@@ -5,14 +6,13 @@ const emailController = {};
 emailController.sendEmail = async (req, res, next) => {
   // Read data from request body
   const id = req.body._id;
-  const sendTo = req.body.email;
-
+  const sendTo = req.body.sendTo;
   try {
     const product = await Product.findById({
-      id,
+      _id: id,
     });
-    var nodemailer = require('nodemailer');
 
+    // console.log(id, sendTo, product.price);
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
